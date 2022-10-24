@@ -21,17 +21,24 @@ function SinglePost() {
         <div id='singlePostContainer'>
             <div id='post'>
                 <h2>{currPost.title}</h2>
-                <p>{currPost.description}</p>
-                <p>Author: {currPost.author.username}</p>
-                <p>Location: {currPost.location}</p>
-                <p>Created: {currPost.createdAt}</p>
-                <button>Contact Seller</button>
-                <p>Is Author: {currPost.isAuthor ? 'true' : 'false'}</p>
-                <p>Creator Id: {currPost.author._id}</p>
-                <p>Messages: {currPost.messages}</p>
-                <p>{currPost.price}</p>
-                <p>Will Deliver? : {currPost.willDeliver}</p>
-                <p>_v (?) : {currPost.__v}</p>
+                <div id='postInfo'>
+                    <p>{currPost.description}</p>
+                    {currPost.author ? <p>Author: {currPost.author.username}</p> : null}
+                    <p>Location: {currPost.location}</p>
+                    <p>Created: {currPost.createdAt}</p>
+
+                    <p>Is Author: {currPost.isAuthor ? 'true' : 'false'}</p>
+                    {currPost.author ? <p>Creator Id: {currPost.author._id}</p> : null}
+                    <p>Messages: {currPost.messages}</p>
+                    <p>{currPost.price}</p>
+                    <p>Will Deliver? : {currPost.willDeliver}</p>
+                    <p>_v (?) : {currPost.__v}</p>
+                </div>
+                <section id='singlePostButtons'>
+                    <button>Delete Post</button>
+                    <button>Edit Post</button>
+                    <button>Contact Seller</button>
+                </section>
             </div>
 
         </div>

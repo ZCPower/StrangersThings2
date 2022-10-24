@@ -1,0 +1,25 @@
+#createPostContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* color: #2acdf0 */
+    color: white;
+}
+
+#createPostContainer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+}
+
+#createPostContainer form input,
+#createPostContainer form button {
+    width: 100%;
+    padding: 1em;
+    margin: 5px;
+}

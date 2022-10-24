@@ -91,3 +91,28 @@ export async function getPostById(postId) {
         console.log(error)
     }
 }
+
+export async function addPost(token, title, description, price, delivery) {
+    const url = `${baseURL}/posts`
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({
+                post: {
+                    title: title,
+                    description: description,
+                    price: price,
+                    willDeliver: delivery
+                }
+            })
+        })
+        const data = response.json()
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}

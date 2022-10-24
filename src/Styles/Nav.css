@@ -4,6 +4,7 @@
 #mainNav {
     display: flex;
     background-color: #CAD2C5;
+    /* background-color: white; */
     font-family: 'Rubik', sans-serif;
     justify-content: space-around;
     align-items: center;

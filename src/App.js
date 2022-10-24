@@ -7,6 +7,7 @@ import Login from './Components/Login';
 import Account from './Components/Account';
 import AllPosts from './Components/AllPosts';
 import SinglePost from './Components/SinglePost';
+import CreatePost from './Components/CreatePost';
 function App() {
   const [token, setToken] = useState('');
   return (
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route exact path='/posts/:postId'>
             <SinglePost />
+          </Route>
+          <Route exact path='/createPost'>
+            <CreatePost />
           </Route>
         </Switch>
       </Router>
