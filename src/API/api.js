@@ -74,3 +74,20 @@ export async function getAllPosts() {
         console.log(error)
     }
 }
+
+export async function getPostById(postId) {
+    console.log('api', postId)
+    const url = `${baseURL}/posts`
+    try {
+        const response = await fetch(url)
+        const data = await response.json();
+
+        let posts = data.data.posts
+        let filtered = posts.filter((x) => {
+            if (x._id === postId) return x
+        })
+        return filtered
+    } catch (error) {
+        console.log(error)
+    }
+}
