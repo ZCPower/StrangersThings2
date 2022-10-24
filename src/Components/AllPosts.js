@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getAllPosts } from '../API/api';
 import '../Styles/AllPosts.css'
+import { Link } from 'react-router-dom'
 
 function AllPosts({ token }) {
     const [postList, setPostList] = useState([]);
@@ -9,6 +10,7 @@ function AllPosts({ token }) {
     useEffect(() => {
         async function getPosts() {
             let allPosts = await getAllPosts();
+            console.log(allPosts)
             setPostList(allPosts.data.posts)
         }
         getPosts()
@@ -22,9 +24,10 @@ function AllPosts({ token }) {
     const mappedPosts = postList.map((x, key) => {
         return (
             <div className='post'>
-                <h3>{x.title}</h3>
+                <Link to={`/posts/${x._id}`}><h3>{x.title}</h3></Link>
                 <p>{x.price}</p>
                 <p>{x.author.username}</p>
+
             </div>
         )
     })

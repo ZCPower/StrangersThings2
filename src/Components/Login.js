@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../Styles/Login.css'
 import { login } from '../API/api';
 import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 
 function Login({ setToken, token }) {
     const [username, setUsername] = useState('');
@@ -24,7 +25,8 @@ function Login({ setToken, token }) {
             console.log(loginAttempt)
             if (loginAttempt.success) {
                 // console.log('successful login')
-                setToken(loginAttempt.data.token)
+                setToken(loginAttempt.data.token);
+                <Redirect push to='/posts' />
                 // console.log(token)
                 //STORE TOKEN IN LOCAL STORAGE
                 //REDIRECT TO HOME PAGE ON LOGIN

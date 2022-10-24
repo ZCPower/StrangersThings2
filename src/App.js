@@ -19,10 +19,10 @@ function App() {
             <Register setToken={setToken} />
           </Route>
           <Route exact path='/account/login'>
-            <Login setToken={setToken} token={token} />
+            {!token ? <Login setToken={setToken} token={token} /> : <Redirect to='/posts' />}
           </Route>
           <Route exact path='/account'>
-            {token ? <Account token={token} setToken={setToken} /> : <h2>Please Login</h2>}
+            {token ? <Account token={token} setToken={setToken} /> : <Redirect to='/account/login' />}
           </Route>
           <Route exact path='/posts'>
             <AllPosts token={token} />

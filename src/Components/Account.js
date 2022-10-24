@@ -21,6 +21,7 @@ function Account({ token, setToken }) {
     function logOut() {
         setToken('');
         setCurrUser(null)
+        localStorage.clear()
     }
 
 
@@ -30,9 +31,9 @@ function Account({ token, setToken }) {
         <div id='accountContainer'>
             {currUser ? <h2>{currUser.username}'s account</h2> : null}
             <div id='accountButtons'>
-                <button>Messages</button>
-                <button>My Posts</button>
-                <button onClick={logOut}>Logout</button>
+                <button id='myMessagesButton'>Messages</button>
+                <button id='myPostButton'>My Posts</button>
+                <button id='logOutButton' onClick={logOut}>Logout</button>
             </div>
         </div>
     )

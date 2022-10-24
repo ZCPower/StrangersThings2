@@ -1,0 +1,22 @@
+#accountContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+#accountContainer h2 {
+    margin: .5em 0 1em 0;
+    /* border: 1px solid yellow; */
+}
+
+#logOutButton {
+    background-color: red;
+    color: white;
+
+}
+
+#accountButtons button {
+    padding: 1em 2em;
+    font-size: 18px;
+    border-radius: 15px;
+}
