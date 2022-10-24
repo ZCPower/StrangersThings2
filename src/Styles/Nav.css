@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+#mainNav {
+    display: flex;
+    /* flex-direction: column; */
+    /* width: 50vw; */
+    /* border: 1px solid red; */
+    background-color: #CAD2C5;
+    /* background-image: linear-gradient(#CAD2C5, #354F52); */
+    font-family: 'Rubik', sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    color: #2F3E46;
+    padding: 0;
+    margin: 0;
+}
+
+#mainNav h1 {
+    font-size: 28px;
+    /* margin: .35em; */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 50px;
+    margin: 0 10px;
+    position: relative;
+    bottom: 5px;
+}
+
+#mainNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    /* margin-top: .5em; */
+    /* padding: 0em 2em; */
+}
+
+#mainNav ul li {
+    /* text-decoration: underline; */
+    padding: .9em 3em;
+
+}
+
+#mainNav ul li:hover {
+    background-image: linear-gradient(to right, #354F52, #52796f);
+    color: #CAD2C5;
+    /* color: white; */
+}
+
+.navLink a:hover {
+    color: #CAD2C5;
+}
+
+.navLink a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 650px) {
+    #logo h1 {
+        font-size: 24px;
+        text-wrap: none;
+        margin: 0;
+    }
+
+    #logo img {
+        width: 30px;
+        margin: 0 5px;
+    }
+
+    .navLink a {
+        font-size: 16px;
+    }
+
+    #mainNav ul {
+        /* margin: 0 0 0 2em; */
+    }
+
+    #mainNav ul li {
+        /* text-decoration: underline; */
+        padding: .9em 1.5em;
+
+    }
+}

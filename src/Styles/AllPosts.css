@@ -1,0 +1,63 @@
+#allPostsContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#allPostsContainer h2 {
+    margin: .5em;
+    color: white;
+}
+
+#postHouse {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.post {
+    flex-basis: 500px;
+    border: 2px solid white;
+    background-color: #CAD2C5;
+    margin: 10px;
+    height: 100px;
+}
+
+#addPostButton {
+    width: 35%;
+    align-self: center;
+    background-color: #84a98c;
+    padding: .5em;
+    font-size: 16px;
+    margin-bottom: 1em;
+    border: none;
+    min-width: 400px;
+}
+
+#addPostButton:hover {
+    background-color: #84a98cc0;
+}
+
+#postSearch {
+    width: 25%;
+    min-width: 300px;
+}
+
+#searchForm button,
+#postSearch {
+    padding: .5em;
+    font-size: 16px;
+    margin-bottom: .5em;
+}
+
+#searchForm button {
+    width: 10%;
+    min-width: 100px;
+}
+
+@media screen and (max-width: 650px) {
+    h1 {
+        font-size: 10px;
+    }
+}

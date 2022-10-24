@@ -1,0 +1,35 @@
+#loginContainer {
+    display: flex;
+    flex-direction: column;
+    /* width:; */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    height: 100%;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginForm button,
+#loginForm input {
+    width: 50%;
+    font-size: 20px;
+    padding: .25em;
+    text-align: center;
+}
+
+#loginForm input {
+    margin: .25em;
+}
+
+#loginForm button {
+    margin: .25em;
+    background-color: #CAD2C5;
+    border: none;
+}
