@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Titillium+Web:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 
 #mainNav {
     display: flex;
@@ -11,11 +17,20 @@
     color: #2F3E46;
     padding: 0;
     margin: 0;
+
 }
 
 #mainNav h1 {
-    font-size: 28px;
+    font-size: 25px;
     font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Abril Fatface', cursive; */
+    /* font-family: 'Noto Serif', serif; */
+    /* font-family: 'PT Serif', serif; */
+    /* font-family: 'Anton', sans-serif; */
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Pacifico', cursive;
+    /* font-family: 'Teko', sans-serif; */
+    /* letter-spacing: 1px; */
 }
 
 #logo {
@@ -27,7 +42,7 @@
     width: 40px;
     margin: 0 10px;
     position: relative;
-    bottom: 5px;
+    bottom: 3px;
 }
 
 #mainNav ul {
@@ -38,6 +53,9 @@
 
 #mainNav ul li {
     padding: .9em 3em;
+    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 600;
 }
 
 #mainNav ul li:hover {

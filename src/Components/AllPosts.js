@@ -43,7 +43,7 @@ function AllPosts({ token, userId }) {
 
     return (
         <div id='allPostsContainer'><h2>All Postings</h2>
-            <form id='searchForm'><input placeholder="Type what you're looking for..." id='postSearch'></input><button>Search</button></form>
+            <form id='searchForm'><img src='https://img.icons8.com/glyph-neue/2x/search.png'></img><input placeholder="Type what you're looking for..." id='postSearch'></input><button>Search</button></form>
             {token ? <Link to='/createpost'><button id='addPostButton'>Add Post</button></Link> : null}
             <div id='postHouse'>
                 {mappedPosts}</div></div>

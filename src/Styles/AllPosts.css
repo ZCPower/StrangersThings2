@@ -2,11 +2,26 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    justify-content: center;
 }
 
 #allPostsContainer h2 {
-    margin: .5em;
+    margin: .5em 0 .75em 0;
     color: white;
+    /* height: 30px; */
+    font-family: 'Noto Serif', serif;
+    font-family: 'PT Serif', serif;
+
+
+}
+
+#allPostsContainer form {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+    align-items: center;
+    height: 40px;
+    margin-bottom: 10px;
 }
 
 #postHouse {
@@ -18,12 +33,29 @@
 
 .post {
     flex-basis: 500px;
-    border: 2px solid white;
+    border: 2px solid #ddd;
     background-color: #CAD2C5;
     margin: 10px;
     height: 100px;
+    font-family: 'Noto Serif', serif;
+    font-family: 'PT Serif', serif;
+    border-radius: 10px;
+    /* font-family: 'Josefin Sans', */
+    /* sans-serif */
 }
 
+/*  font-family: 'Josefin Sans',
+ sans-serif;
+ /* font-family: 'Abril Fatface', cursive; */
+/* font-family: 'Noto Serif', serif; */
+/* font-family: 'PT Serif', serif; */
+/* font-family: 'Anton', sans-serif; */
+/* font-family: 'Prompt',
+sans-serif;
+font-family: 'Pacifico',
+cursive; */
+
+/* font-family: 'Teko', sans-serif; */
 #addPostButton {
     width: 35%;
     align-self: center;
@@ -33,6 +65,7 @@
     margin-bottom: 1em;
     border: none;
     min-width: 400px;
+    font-family: 'PT Serif', serif;
 }
 
 #addPostButton:hover {
@@ -40,18 +73,47 @@
 }
 
 #postSearch {
-    width: 25%;
-    min-width: 300px;
+    width: 35%;
+    min-width: 400px;
 }
 
 #searchForm button,
 #postSearch {
     padding: .5em;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: .5em;
+    height: 40px;
+    border: none;
+    font-family: 'Noto Serif', serif;
+    /* font-family: 'PT Serif', serif; */
+
 }
+
+
 
 #searchForm button {
     width: 10%;
     min-width: 100px;
+    background-color: #ddd;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchForm button:hover {
+    background-color: #84a98c;
+    color: white;
+}
+
+#searchForm img {
+    height: 40px;
+    padding: 10px;
+    position: relative;
+    bottom: 5px;
+    border: none;
+    background-color: #ddd;
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+
 }
