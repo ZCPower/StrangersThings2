@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import '../Styles/SinglePost.css'
-import { getPostById } from '../API/api';
+import { deletePost, getPostById } from '../API/api';
 
-function SinglePost() {
+function SinglePost({ token, userId }) {
     const { postId } = useParams();
     const [currPost, setCurrPost] = useState({});
 
@@ -16,6 +16,10 @@ function SinglePost() {
         }
         getPost()
     }, [postId])
+
+    console.log(currPost)
+
+
 
     return (
         <div id='singlePostContainer'>
@@ -35,7 +39,9 @@ function SinglePost() {
                     <p>_v (?) : {currPost.__v}</p>
                 </div>
                 <section id='singlePostButtons'>
-                    <button>Delete Post</button>
+                    {/* {currPost.author && currPost.author._id === userId ?
+                        <button onClick={delPost}>Delete Post</button>
+                        : null} */}
                     <button>Edit Post</button>
                     <button>Contact Seller</button>
                 </section>

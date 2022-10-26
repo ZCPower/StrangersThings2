@@ -4,19 +4,22 @@ import '../Styles/Account.css'
 
 
 
-function Account({ token, setToken }) {
-    const [currUser, setCurrUser] = useState({})
+function Account({ token, setToken, currUser, setCurrUser }) {
+    // const [currUser, setCurrUser] = useState({})
 
-    useEffect(() => {
-        async function getMe() {
-            let user = await currentUser(token);
-            setCurrUser(user.data)
-            console.log(currUser, 'CURRUSER')
-            console.log(token)
-        }
-        getMe()
-    }, [])
+    // useEffect(() => {
+    //     async function getMe() {
+    //         let user = await currentUser(token);
 
+    //         // console.log(user)
+    //         setCurrUser(user.data)
+    //         console.log(currUser, 'CURRUSER')
+    //         // console.log(token)
+    //     }
+    //     getMe()
+    // }, [])
+
+    console.log(currUser)
 
     function logOut() {
         setToken('');

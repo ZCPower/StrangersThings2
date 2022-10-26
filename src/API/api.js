@@ -111,8 +111,28 @@ export async function addPost(token, title, description, price, delivery) {
             })
         })
         const data = response.json()
+        console.log(data)
         return data
     } catch (error) {
         console.log(error)
+    }
+}
+
+
+export async function deletePost(token, postId,) {
+    const url = `${baseURL}/posts/${postId}`
+    try {
+        const response = await fetch(url, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        const data = response.json();
+        console.log(data)
+        return data
+    } catch (error) {
+
     }
 }

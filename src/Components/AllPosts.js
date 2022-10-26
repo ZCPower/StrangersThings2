@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { getAllPosts } from '../API/api';
 import '../Styles/AllPosts.css'
 import { Link } from 'react-router-dom'
+import { deletePost } from '../API/api';
 
-function AllPosts({ token }) {
+function AllPosts({ token, userId }) {
     const [postList, setPostList] = useState([]);
     const [searchInput, setSearchInput] = useState('');
 
@@ -14,12 +15,17 @@ function AllPosts({ token }) {
             setPostList(allPosts.data.posts)
         }
         getPosts()
-    }, [])
+    }, [postList])
 
     function handleSearchChange(e) {
         e.preventDefault()
         setSearchInput(e.target.value)
     }
+
+    // function delPost(e) {
+    //     e.preventDefault();
+    //     deletePost(token, x._id)
+    // }
 
     const mappedPosts = postList.map((x, key) => {
         return (
@@ -27,7 +33,9 @@ function AllPosts({ token }) {
                 <Link to={`/posts/${x._id}`}><h3>{x.title}</h3></Link>
                 <p>{x.price}</p>
                 <p>{x.author.username}</p>
-
+                {x.author._id === userId ? <button onClick={() => {
+                    deletePost(token, x._id)
+                }}>Delete</button> : null}
             </div>
         )
     })
