@@ -15,7 +15,9 @@ function AllPosts({ token, userId }) {
             setPostList(allPosts.data.posts)
         }
         getPosts()
-    }, [postList])
+    }, [])
+
+    //running this async might make it run faster?
 
     function handleSearchChange(e) {
         e.preventDefault()
@@ -33,10 +35,12 @@ function AllPosts({ token, userId }) {
                 <Link to={`/posts/${x._id}`}><h3>{x.title}</h3></Link>
                 <p>{x.price}</p>
                 <p>{x.author.username}</p>
+                < p > {x.location}</p>
                 {x.author._id === userId ? <button onClick={() => {
                     deletePost(token, x._id)
-                }}>Delete</button> : null}
-            </div>
+
+                }}> Delete</button > : null}
+            </div >
         )
     })
 

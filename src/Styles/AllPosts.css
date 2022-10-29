@@ -3,6 +3,8 @@
     flex-direction: column;
     overflow: hidden;
     justify-content: center;
+    /* background-color: #00000070; */
+    /* Mess with this, not a huge */
 }
 
 #allPostsContainer h2 {
@@ -22,6 +24,7 @@
     align-items: center;
     height: 40px;
     margin-bottom: 10px;
+
 }
 
 #postHouse {
@@ -29,6 +32,8 @@
     flex-wrap: wrap;
     justify-content: center;
     overflow: scroll;
+    /* background-image: linear-gradient(#2f3e46, #344e41); */
+    background-color: #00000070;
 }
 
 .post {
@@ -36,7 +41,7 @@
     border: 2px solid #ddd;
     background-color: #CAD2C5;
     margin: 10px;
-    height: 100px;
+    height: 150px;
     font-family: 'Noto Serif', serif;
     font-family: 'PT Serif', serif;
     border-radius: 10px;
@@ -59,7 +64,9 @@ cursive; */
 #addPostButton {
     width: 35%;
     align-self: center;
-    background-color: #84a98c;
+    /* background-color: #84a98c; */
+    /* background-color: #CAD2C5; */
+    background-color: #ddd;
     padding: .5em;
     font-size: 16px;
     margin-bottom: 1em;
@@ -69,12 +76,19 @@ cursive; */
 }
 
 #addPostButton:hover {
-    background-color: #84a98cc0;
+    background-color: #84a98c;
+    color: white;
 }
 
 #postSearch {
     width: 35%;
     min-width: 400px;
+    background-color: #00000070;
+    color: white;
+}
+
+#postSearch:focus {
+    outline: none;
 }
 
 #searchForm button,

@@ -83,9 +83,7 @@ export async function getPostById(postId) {
         const data = await response.json();
 
         let posts = data.data.posts
-        let filtered = posts.filter((x) => {
-            if (x._id === postId) return x
-        })
+        let filtered = posts.filter((x) => x._id === postId)
         return filtered
     } catch (error) {
         console.log(error)
@@ -133,6 +131,33 @@ export async function deletePost(token, postId,) {
         console.log(data)
         return data
     } catch (error) {
+        console.error(error)
+    }
+}
 
+export async function editPost(token, postId, title, desc, price, location, deliver) {
+    const url = `${baseURL}/posts/${postId}`
+    try {
+        const response = await fetch(url, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({
+                post: {
+                    title: title,
+                    description: desc,
+                    price: price,
+                    location: location,
+                    willDeliver: deliver
+                }
+            })
+        })
+        const data = response.json();
+        console.log(data)
+        return data
+    } catch (error) {
+        console.error(error)
     }
 }
