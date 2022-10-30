@@ -161,3 +161,26 @@ export async function editPost(token, postId, title, desc, price, location, deli
         console.error(error)
     }
 }
+
+export async function sendMessage(token, postId, content) {
+    const url = `${baseURL}/posts/${postId}/messages`;
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({
+                message: {
+                    content: content
+                }
+            })
+        })
+        const data = response.json();
+        console.log(data)
+        return data
+    } catch (error) {
+        console.log()
+    }
+}

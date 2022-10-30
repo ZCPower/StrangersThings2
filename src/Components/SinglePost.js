@@ -4,6 +4,7 @@ import '../Styles/SinglePost.css'
 import { deletePost, getPostById } from '../API/api';
 import EditPost from './EditPost';
 import { editPost } from '../API/api';
+import MessageForm from './MessageForm';
 
 
 function SinglePost({ token, userId }) {
@@ -12,6 +13,7 @@ function SinglePost({ token, userId }) {
     const { postId } = useParams();
     const [currPost, setCurrPost] = useState({});
     const [edit, setEdit] = useState(false)
+    const [messaging, setMessaging] = useState(false)
 
     useEffect(() => {
         async function getPost() {
@@ -31,29 +33,31 @@ function SinglePost({ token, userId }) {
         setEdit(prevState => !prevState)
     }
 
+    function toggleMessage() {
+        setMessaging(prevState => !prevState)
+    }
+
     return (
         <div id='singlePostContainer'>
             <div id='post'>
                 <h2>{currPost.title}</h2>
-                {edit ? <EditPost setEdit={setEdit} token={token} postId={postId} title={currPost.title} price={currPost.price} location={currPost.location} desc={currPost.description} deliver={currPost.willDeliver} update={updatePost} /> : <div id='postInfo'>
+                {edit ? <EditPost setEdit={setEdit} token={token} postId={postId} title={currPost.title} price={currPost.price} location={currPost.location} desc={currPost.description} deliver={currPost.willDeliver} update={updatePost} /> : <div style={messaging ? { display: 'none' } : null} id='postInfo'>
                     <p><strong>Description:</strong>{currPost.description}</p>
                     {currPost.author ? <p><strong>Author:</strong> {currPost.author.username}</p> : null}
                     <div><p><strong>Location:</strong> {currPost.location}</p>
                         <p><strong>Created:</strong> {currPost.createdAt}</p></div>
-
-                    {/* <p>Is Author: {currPost.isAuthor ? 'true' : 'false'}</p> */}
-                    {/* {currPost.author ? <p>Creator Id: {currPost.author._id}</p> : null} */}
-                    {/* <p>Messages: {currPost.messages}</p> */}
                     <p><strong>Price:</strong> {currPost.price}</p>
                     <p><strong>Willing to Deliver?</strong> : {currPost.willDeliver ? 'Yes' : 'No'}</p>
                     {/* <p>_v (?) : {currPost.__v}</p> */}
                 </div>}
+                {messaging ? <MessageForm seller={currPost.author.username} postId={postId} token={token} /> : null}
 
                 <section id='singlePostButtons'>
                     {currPost.author && currPost.author._id === userId ?
                         <button onClick={toggleEdit}><img src='https://img.icons8.com/ios-filled/344/pencil--v2.png'></img>Edit Posting</button>
-                        : <button><img src='https://img.icons8.com/windows/344/chat-message.png'></img>Contact Seller</button>}
+                        : <button onClick={toggleMessage}><img src='https://img.icons8.com/windows/344/chat-message.png'></img>{!messaging ? 'Contact Seller' : 'Cancel Message'}</button>}
                 </section>
+
             </div>
 
         </div>

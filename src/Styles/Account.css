@@ -53,6 +53,7 @@
     font-size: 18px;
     border-radius: 15px;
     transition: ease-in .3s;
+    border: none;
 }
 
 #accountButtons button:hover {
@@ -63,6 +64,13 @@
     background-color: #BB0000;
     /* opacity: 75%; */
 }
+
+.myPost {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media (max-width: 650px) {
     #accountButtons button {

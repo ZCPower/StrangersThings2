@@ -7,7 +7,7 @@
 
 #post {
     /* border: 1px solid black; */
-    box-shadow: 1px 1px 5px 5px white;
+    box-shadow: 1px 1px 5px 5px #CAD2C5;
     /* border: solid 1px #DAF7E9; */
     width: 70%;
     background-image: linear-gradient(#CAD2C5, white);
@@ -43,14 +43,14 @@
 
 #postInfo p {
     margin: 5px;
-    font-size: 14px;
+    font-size: 16px;
     color: black;
     /* change to color theme */
 }
 
 #postInfo p strong {
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #singlePostButtons {

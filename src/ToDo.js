@@ -10,4 +10,9 @@ figure out whether to edit posts on new page
 
     //make sure all accent colors match the original color scheme. 
     i.e. input borders, fonts, etc
+
+
+    //functionality that redirects user to login on successful register.
+
+    //do something after sending a message.
 */
