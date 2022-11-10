@@ -14,23 +14,16 @@
     font-family: 'Rubik', sans-serif;
     justify-content: space-around;
     align-items: center;
-    color: #2F3E46;
+    /* color: #2F3E46; */
     padding: 0;
     margin: 0;
-
+    /* border: 1px solid red; */
+    /* max-width: 100vw; */
 }
 
 #mainNav h1 {
     font-size: 25px;
-    font-family: 'Josefin Sans', sans-serif;
-    /* font-family: 'Abril Fatface', cursive; */
-    /* font-family: 'Noto Serif', serif; */
-    /* font-family: 'PT Serif', serif; */
-    /* font-family: 'Anton', sans-serif; */
-    font-family: 'Prompt', sans-serif;
     font-family: 'Pacifico', cursive;
-    /* font-family: 'Teko', sans-serif; */
-    /* letter-spacing: 1px; */
 }
 
 #logo {
@@ -51,27 +44,34 @@
     list-style: none;
 }
 
+#mainNav ul:hover {
+    color: #CAD2C5;
+}
+
 #mainNav ul li {
-    padding: .9em 3em;
-    font-family: 'Titillium Web', sans-serif;
+    padding: .9em 0;
+
     font-family: 'Prompt', sans-serif;
     font-weight: 600;
 }
 
 #mainNav ul li:hover {
-    background-image: linear-gradient(to right, #354F52, #52796f);
-    color: #CAD2C5;
-}
-
-.navLink a:hover {
     color: #CAD2C5;
 }
 
 .navLink a {
     font-size: 18px;
     text-decoration: none;
-    color: #2F3E46
+    color: #2F3E46;
+    height: 100%;
+    padding: .9em 3em;
 }
+
+.navLink a:hover {
+    color: #CAD2C5;
+    background-color: #2f3e46;
+}
+
 
 .navLink:hover {
     color: #CAD2C5;

@@ -1,25 +1,20 @@
 #singlePostContainer {
     display: flex;
-    height: 100%;
+    height: 90vh;
     justify-content: center;
     align-items: center;
 }
 
 #post {
-    /* border: 1px solid black; */
     box-shadow: 1px 1px 5px 5px #CAD2C5;
-    /* border: solid 1px #DAF7E9; */
-    width: 70%;
+    width: 65%;
     background-image: linear-gradient(#CAD2C5, white);
-    height: 70%;
+    height: 80%;
     border-radius: 20px;
     font-family: 'Noto Serif', serif;
     display: flex;
     flex-direction: column;
-    /* align-items: space-between; */
     justify-content: space-between;
-    /* align-items: flex-start; */
-    /* border: red 1px solid; */
 }
 
 #post h2 {
@@ -28,7 +23,7 @@
     color: #CAD2C5;
     border-radius: 20px 20px 0 0;
     padding: .5em;
-    /* margin-bottom: 1em; */
+    margin: 0;
 }
 
 #postInfo {
@@ -36,21 +31,28 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    justify-content: center;
+    align-items: space-evenly;
+    justify-content: space-evenly;
     height: 70%;
-    gap: 10px;
+    gap: 15px;
+    /* border: 1px solid red; */
 }
 
 #postInfo p {
-    margin: 5px;
-    font-size: 16px;
+    /* margin: 5px; */
+    font-size: 20px;
     color: black;
-    /* change to color theme */
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #000000;
 }
 
 #postInfo p strong {
-    margin-right: 10px;
-    font-size: 18px;
+    /* margin-right: 10px; */
+    font-size: 20px;
+    /* justify-self: ; */
+    text-align: left;
 }
 
 #singlePostButtons {
@@ -69,9 +71,19 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    border-radius: 10px;
 }
 
 #singlePostButtons button img {
     width: 20px;
     margin: 0 10px 0 0;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.red:hover {
+    background-color: #BB0000;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../Styles/Register.css'
+// import '../Styles/Register.css'
 import { register } from '../API/api';
 import { Link } from 'react-router-dom'
 
@@ -10,7 +10,6 @@ function Register({ setToken }) {
 
     function handleNameChange(e) {
         e.preventDefault()
-        // console.log(username)
         setUsername(e.target.value)
     }
 
@@ -41,9 +40,9 @@ function Register({ setToken }) {
 
     return (
         <div id='registerContainer'>
-
+            <h2>Register for an account!</h2>
             <form id='registerForm' onSubmit={handleRegSubmit}>
-                <h2>Register for an account!</h2>
+
                 <input placeholder='Username' onChange={handleNameChange}></input>
                 <input type='password' placeholder='Password' onChange={handlePassChange}></input>
                 <input type='password' placeholder='Confirm Password' onChange={handleConfirmPassChange}></input>

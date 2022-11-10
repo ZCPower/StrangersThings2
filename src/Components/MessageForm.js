@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { sendMessage } from '../API/api'
+import '../Styles/MessageForm.css'
 
 function MessageForm({ seller, token, postId }) {
     const [content, setContent] = useState('');
@@ -19,7 +20,7 @@ function MessageForm({ seller, token, postId }) {
 
 
     return (
-        <div>
+        <div id='messageForm'>
             <h3>To: {seller}</h3>
             <form onSubmit={submitMessage}>
                 <textarea onChange={handleMessageContent}></textarea>

@@ -47,15 +47,22 @@ function SinglePost({ token, userId }) {
                     <div><p><strong>Location:</strong> {currPost.location}</p>
                         <p><strong>Created:</strong> {currPost.createdAt}</p></div>
                     <p><strong>Price:</strong> {currPost.price}</p>
-                    <p><strong>Willing to Deliver?</strong> : {currPost.willDeliver ? 'Yes' : 'No'}</p>
+                    <p><strong>Willing to Deliver?</strong> {currPost.willDeliver ? 'Yes' : 'No'}</p>
                     {/* <p>_v (?) : {currPost.__v}</p> */}
                 </div>}
                 {messaging ? <MessageForm seller={currPost.author.username} postId={postId} token={token} /> : null}
 
                 <section id='singlePostButtons'>
                     {currPost.author && currPost.author._id === userId ?
-                        <button onClick={toggleEdit}><img src='https://img.icons8.com/ios-filled/344/pencil--v2.png'></img>Edit Posting</button>
-                        : <button onClick={toggleMessage}><img src='https://img.icons8.com/windows/344/chat-message.png'></img>{!messaging ? 'Contact Seller' : 'Cancel Message'}</button>}
+                        <button onClick={toggleEdit}><img
+                            src='https://img.icons8.com/ios-filled/344/pencil--v2.png'></img>Edit Posting</button>
+                        : <button onClick={toggleMessage}
+                            className={messaging ? 'red' : null} >
+
+                            <img src={!messaging ? 'https://img.icons8.com/windows/344/chat-message.png' : 'https://img.icons8.com/ios-glyphs/512/delete-sign.png'}>
+
+
+                            </img>{!messaging ? 'Contact Seller' : 'Cancel Message'}</button>}
                 </section>
 
             </div>

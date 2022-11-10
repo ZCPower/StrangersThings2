@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 90vh;
     /* color: #2acdf0 */
     color: white;
 }
@@ -14,7 +14,8 @@
     justify-content: center;
     align-items: center;
     width: 50%;
-
+    gap: 20px;
+    color: black;
 }
 
 #createPostContainer form input,
@@ -22,4 +23,5 @@
     width: 100%;
     padding: 1em;
     margin: 5px;
+    font-size: 18px;
 }

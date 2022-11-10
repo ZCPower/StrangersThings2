@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 function Nav({ token }) {
     return (
-        <nav id='mainNav'>
+        <nav id='mainNav' >
             <div id='logo'>
-                <h1>Stranger's Things</h1>
+                <h1 className='text-8xl'>Stranger's Things</h1>
                 <img src='https://img.icons8.com/cotton/2x/box.png'></img>
             </div>
             <ul>

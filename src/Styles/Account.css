@@ -31,16 +31,10 @@
     border-radius: 50%;
     background-color: #CAD2C5;
     outline: 8px solid black;
-    /* margin: 10px; */
     position: relative;
-    /* bottom: 15px; */
 }
 
-#logOutButton {
-    background-color: red;
-    color: white;
-    /* transition: ease-in .3s; */
-}
+
 
 #accountButtons {
     margin-bottom: 10px;
@@ -54,10 +48,20 @@
     border-radius: 15px;
     transition: ease-in .3s;
     border: none;
+    color: black;
+    border: 1px solid gray;
+    background-color: #CAD2C5;
 }
 
 #accountButtons button:hover {
     background-color: #88cc99;
+}
+
+#accountButtons #logOutButton {
+    background-color: red;
+    color: white;
+    border: none;
+    /* transition: ease-in .3s; */
 }
 
 #accountButtons #logOutButton:hover {

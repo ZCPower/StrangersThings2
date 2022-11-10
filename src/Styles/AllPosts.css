@@ -5,17 +5,10 @@
     justify-content: center;
     /* background-color: #00000070; */
     /* Mess with this, not a huge */
+    overflow-x: hidden;
 }
 
-#allPostsContainer h2 {
-    margin: .5em 0 .75em 0;
-    color: white;
-    /* height: 30px; */
-    font-family: 'Noto Serif', serif;
-    font-family: 'PT Serif', serif;
 
-
-}
 
 #allPostsContainer form {
     display: flex;
@@ -34,6 +27,7 @@
     overflow: scroll;
     /* background-image: linear-gradient(#2f3e46, #344e41); */
     background-color: #00000070;
+    overflow-y: hidden;
 }
 
 .post {
@@ -41,32 +35,58 @@
     /* border: 2px solid #ddd; */
     background-color: #CAD2C5;
     margin: 10px;
-    height: 150px;
+    height: 190px;
     font-family: 'Noto Serif', serif;
     font-family: 'PT Serif', serif;
     border-radius: 10px;
     border-top: 5px solid #84a98c;
+    gap: 15px;
     /* font-family: 'Josefin Sans', */
     /* sans-serif */
 }
 
-/*  font-family: 'Josefin Sans',
- sans-serif;
- /* font-family: 'Abril Fatface', cursive; */
-/* font-family: 'Noto Serif', serif; */
-/* font-family: 'PT Serif', serif; */
-/* font-family: 'Anton', sans-serif; */
-/* font-family: 'Prompt',
-sans-serif;
-font-family: 'Pacifico',
-cursive; */
+.post button {
+    background-color: #CAD2C5;
+    border: 1px solid black;
+    padding: .25em 1em;
+    border-radius: 5px;
+    /* width: 150px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* font-family: 'Teko', sans-serif; */
+.post button img {
+    width: 20px;
+    margin: 0 10px;
+}
+
+.post button:hover {
+    background-color: #ff000090;
+    color: black;
+}
+
+.post h3 {
+    background-color: #84a98c;
+    /* background-color: black; */
+    /* color: white; */
+    padding: .25em;
+    min-height: 35px;
+    /* border-bottom: black 1px solid; */
+    text-transform: capitalize;
+    font-size: 1.1em;
+    /* margin-bottom: 1em; */
+}
+
+.post p {
+    color: black;
+    margin: .5em;
+}
+
 #addPostButton {
     width: 35%;
     align-self: center;
-    /* background-color: #84a98c; */
-    /* background-color: #CAD2C5; */
     background-color: #ddd;
     padding: .5em;
     font-size: 16px;
@@ -86,7 +106,6 @@ cursive; */
     min-width: 400px;
     background-color: #00000070;
     color: white;
-    /* position: fixed; */
 }
 
 #postSearch:focus {
@@ -101,9 +120,6 @@ cursive; */
     height: 40px;
     border: none;
     font-family: 'Noto Serif', serif;
-    /* position: fixed; */
-    /* font-family: 'PT Serif', serif; */
-
 }
 
 
@@ -137,5 +153,5 @@ cursive; */
 
 #searchForm {
     /* position: sticky; */
-    z-index: 500;
+    /* z-index: 500; */
 }

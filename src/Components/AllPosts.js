@@ -39,7 +39,7 @@ function AllPosts({ token, userId }) {
                 {x.author._id === userId ? <button onClick={() => {
                     deletePost(token, x._id)
 
-                }}> Delete</button > : null}
+                }}> <img src='https://img.icons8.com/ios-glyphs/512/delete-sign.png'></img>Delete</button > : null}
             </div >
         )
     })

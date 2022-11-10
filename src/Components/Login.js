@@ -38,7 +38,7 @@ function Login({ setToken, token }) {
     return (
         <div id='loginContainer'>
             <h2>Login!</h2>
-            <h4>{token}</h4>
+            {/* <h4>{token}</h4> */}
             <form id='loginForm' onSubmit={handleLoginSubmit}>
                 <input placeholder='Username' onChange={handleUsernameChange}></input>
                 <input type='password' placeholder='Password' onChange={handlePasswordChange}></input>
