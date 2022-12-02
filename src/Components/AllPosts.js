@@ -7,6 +7,7 @@ import { deletePost } from '../API/api';
 function AllPosts({ token, userId }) {
     const [postList, setPostList] = useState([]);
     const [searchInput, setSearchInput] = useState('');
+    const [finalSearch, setFinalSearch] = useState('');
 
     useEffect(() => {
         async function getPosts() {
@@ -17,19 +18,30 @@ function AllPosts({ token, userId }) {
         getPosts()
     }, [])
 
-    //running this async might make it run faster?
+    //have a piece of state that tells what we are searching for.
+    //create a variable that filters postList where x.title contains searchVariable
+    //map this new array and have that be what is dispalyed.
+
+    // console.log(postList, 'post list')
+
+    const filtered = postList.filter((x => {
+        return x.title.toLowerCase().includes(finalSearch.toLowerCase())
+    }))
+    console.log(searchInput)
+    console.log(filtered, 'filtered')
 
     function handleSearchChange(e) {
         e.preventDefault()
         setSearchInput(e.target.value)
     }
 
-    // function delPost(e) {
-    //     e.preventDefault();
-    //     deletePost(token, x._id)
-    // }
+    function handleSearchSubmit(e) {
+        e.preventDefault();
+        setFinalSearch(searchInput)
+    }
 
-    const mappedPosts = postList.map((x, key) => {
+
+    const mappedPosts = filtered.map((x, key) => {
         return (
             <div className='post'>
                 <Link to={`/posts/${x._id}`}><h3>{x.title}</h3></Link>
@@ -47,7 +59,7 @@ function AllPosts({ token, userId }) {
 
     return (
         <div id='allPostsContainer'><h2>All Postings</h2>
-            <form id='searchForm'><img src='https://img.icons8.com/glyph-neue/2x/search.png'></img><input placeholder="Type what you're looking for..." id='postSearch'></input><button>Search</button></form>
+            <form id='searchForm'><img src='https://img.icons8.com/glyph-neue/2x/search.png'></img><input onChange={handleSearchChange} placeholder="Type what you're looking for..." id='postSearch'></input><button onClick={handleSearchSubmit}>Search</button></form>
             {token ? <Link to='/createpost'><button id='addPostButton'>Add Post</button></Link> : null}
             <div id='postHouse'>
                 {mappedPosts}</div></div>

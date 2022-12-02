@@ -52,7 +52,6 @@
 #registerForm input:focus {
     outline: none;
     border-bottom: 1px solid white;
-    /* background-color: #FFFFFF30; */
     color: white;
 }
 
@@ -73,4 +72,19 @@
 #registerForm button:hover {
     background-color: #88cc99;
     color: white;
+}
+
+#registerAlert {
+    position: absolute;
+    bottom: 5vh;
+    padding: 1.5em;
+    background-color: #88cc99;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#registerAlert p {
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
 }

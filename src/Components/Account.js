@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { currentUser } from '../API/api';
+import React, { useState } from 'react';
 import '../Styles/Account.css'
 
 
 
-function Account({ token, setToken, currUser, setCurrUser }) {
+function Account({ setToken, currUser, setCurrUser }) {
     const [viewing, setViewing] = useState(null);
-    console.log(currUser)
+    console.log(currUser, 'me')
 
     function logOut() {
         setToken('');
@@ -27,9 +26,9 @@ function Account({ token, setToken, currUser, setCurrUser }) {
     let messages = currUser.messages.map((x) => {
         return (
             <div className='message'>
-                <h3>{x.content}</h3>
-                <p>{x.fromUser.username}</p>
-                <p>{x.post.title}</p>
+                <p><strong>Message:</strong> {x.content}</p>
+                <p><strong>Sender:</strong> {x.fromUser.username === currUser.username ? 'Yourself' : x.fromUser.username}</p>
+                <p><strong>Posting:</strong>{x.post.title}</p>
             </div>
         )
     })
@@ -38,9 +37,6 @@ function Account({ token, setToken, currUser, setCurrUser }) {
     let filteredPosts = currUser.posts.filter((x) => {
         return x.active
     })
-
-    console.log(filteredPosts)
-
 
     let posts = filteredPosts.map((x) => {
         return (
@@ -53,8 +49,6 @@ function Account({ token, setToken, currUser, setCurrUser }) {
         )
     })
 
-    //HAVE STATE OF USER/USERNAME
-    //SET LOCAL STORAGE TO CLEAR
     return (
         <div id='accountContainer'>
             <div id='accountInfo'>

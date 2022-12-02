@@ -10,18 +10,22 @@ import SinglePost from './Components/SinglePost';
 import CreatePost from './Components/CreatePost';
 import { currentUser } from './API/api';
 function App() {
-
   const [token, setToken] = useState('');
 
   const [currUser, setCurrUser] = useState({})
   const [userId, setUserId] = useState(null)
+  const [alertMessage, setAlertMessage] = useState('');
+
+
+
   useEffect(() => {
     async function getMe() {
       let user = await currentUser(token);
-
-      setCurrUser(user.data)
-      setUserId(user.data._id)
-      console.log(currUser, 'CURRUSER')
+      if (user) {
+        setCurrUser(user.data)
+        setUserId(user.data._id)
+        console.log(currUser, 'CURRUSER')
+      }
     }
     getMe()
   }, [token])
@@ -36,10 +40,10 @@ function App() {
             <Redirect to='/account/login' />
           </Route>
           <Route exact path='/account/register'>
-            <Register setToken={setToken} />
+            <Register setToken={setToken} setAlertMessage={setAlertMessage} />
           </Route>
           <Route exact path='/account/login'>
-            {!token ? <Login setToken={setToken} token={token} /> : <Redirect to='/posts' />}
+            {!token ? <Login setToken={setToken} token={token} alertMessage={alertMessage} /> : <Redirect to='/posts' />}
           </Route>
           <Route exact path='/account'>
             {token ? <Account token={token} setToken={setToken} currUser={currUser} setCurrUser={setCurrUser} /> : <Redirect to='/account/login' />}

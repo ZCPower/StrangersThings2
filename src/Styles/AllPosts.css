@@ -3,8 +3,6 @@
     flex-direction: column;
     overflow: hidden;
     justify-content: center;
-    /* background-color: #00000070; */
-    /* Mess with this, not a huge */
     overflow-x: hidden;
 }
 
@@ -13,7 +11,6 @@
 #allPostsContainer form {
     display: flex;
     justify-content: center;
-    /* border: 2px solid red; */
     align-items: center;
     height: 40px;
     margin-bottom: 10px;
@@ -25,24 +22,19 @@
     flex-wrap: wrap;
     justify-content: center;
     overflow: scroll;
-    /* background-image: linear-gradient(#2f3e46, #344e41); */
-    background-color: #00000070;
+    background-color: #00000050;
     overflow-y: hidden;
 }
 
 .post {
     flex-basis: 500px;
-    /* border: 2px solid #ddd; */
     background-color: #CAD2C5;
     margin: 10px;
     height: 190px;
-    font-family: 'Noto Serif', serif;
     font-family: 'PT Serif', serif;
     border-radius: 10px;
     border-top: 5px solid #84a98c;
     gap: 15px;
-    /* font-family: 'Josefin Sans', */
-    /* sans-serif */
 }
 
 .post button {
@@ -50,7 +42,6 @@
     border: 1px solid black;
     padding: .25em 1em;
     border-radius: 5px;
-    /* width: 150px; */
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -68,15 +59,12 @@
 }
 
 .post h3 {
-    background-color: #84a98c;
-    /* background-color: black; */
-    /* color: white; */
+    background-color: black;
+    color: white;
     padding: .25em;
     min-height: 35px;
-    /* border-bottom: black 1px solid; */
     text-transform: capitalize;
     font-size: 1.1em;
-    /* margin-bottom: 1em; */
 }
 
 .post p {
@@ -149,9 +137,4 @@
     margin: 0;
     border-radius: 5px 0 0 5px;
 
-}
-
-#searchForm {
-    /* position: sticky; */
-    /* z-index: 500; */
 }

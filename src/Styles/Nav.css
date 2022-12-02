@@ -10,15 +10,12 @@
 #mainNav {
     display: flex;
     background-color: #CAD2C5;
-    /* background-color: white; */
     font-family: 'Rubik', sans-serif;
     justify-content: space-around;
     align-items: center;
-    /* color: #2F3E46; */
     padding: 0;
     margin: 0;
-    /* border: 1px solid red; */
-    /* max-width: 100vw; */
+
 }
 
 #mainNav h1 {

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-// import '../Styles/Register.css'
 import { register } from '../API/api';
-import { Link } from 'react-router-dom'
+import { Link, Redirect, useHistory } from 'react-router-dom'
 
-function Register({ setToken }) {
+function Register({ setAlertMessage }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confPassword, setConfPassword] = useState('');
+
+    let history = useHistory();
 
     function handleNameChange(e) {
         e.preventDefault()
@@ -29,8 +30,13 @@ function Register({ setToken }) {
             if (password === confPassword) {
                 let reg = await register(username, password);
                 if (reg.success) {
-                    setToken(reg.data.token)
-                    //redirect to lgin page
+                    // setToken(reg.data.token);
+                    console.log('WE REGSITERED');
+                    history.push('/account/login')
+                    setAlertMessage(`Successfully registered user ${username}!`)
+                    setTimeout(() => {
+                        setAlertMessage('');
+                    }, 1600)
                 }
             } else console.log('no matchyo matchy')
         } catch (error) {

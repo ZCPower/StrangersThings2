@@ -9,7 +9,6 @@
 }
 
 #accountContainer h2 {
-    /* margin: .5em 0 .5em 0; */
     text-transform: capitalize;
 }
 
@@ -23,7 +22,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* make this relevant to color theme */
 }
 
 #accountInfo img {
@@ -61,12 +59,10 @@
     background-color: red;
     color: white;
     border: none;
-    /* transition: ease-in .3s; */
 }
 
 #accountButtons #logOutButton:hover {
     background-color: #BB0000;
-    /* opacity: 75%; */
 }
 
 .myPost {
@@ -75,6 +71,25 @@
     flex-direction: column;
 }
 
+#myMessages {
+    display: flex;
+    gap: 10px;
+    margin: 2em;
+}
+
+.message {
+    background-color: #CAD2C5;
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.message p {
+    color: black;
+    /* font-weight: bold; */
+}
 
 @media (max-width: 650px) {
     #accountButtons button {
@@ -85,6 +100,5 @@
 @media (max-width: 550px) {
     #accountButtons button {
         font-size: 14px;
-        /* padding: 1em 1em; */
     }
 }
