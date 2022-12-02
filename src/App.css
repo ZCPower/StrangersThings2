@@ -3,15 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
 
-/* maybes ---v */
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Titillium+Web:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+/* maybes ---v @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Titillium+Web:wght@400;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap'); */
 
 
 * {
@@ -30,18 +29,13 @@
   flex-direction: column;
   max-width: 100vw;
   min-height: 100vh;
-  /* background-color: #84A98C; */
   background-image: linear-gradient(#2f3e46, #344e41);
-  /* overflow-y: none; */
-  /* overflow-x: hidden; */
 }
 
 
 h2 {
   margin: .5em 0 .75em 0;
   color: white;
-  /* height: 30px; */
-  font-family: 'Noto Serif', serif;
   font-family: 'PT Serif', serif;
   font-size: 24px;
 }

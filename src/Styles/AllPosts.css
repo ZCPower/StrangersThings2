@@ -23,7 +23,8 @@
     justify-content: center;
     overflow: scroll;
     background-color: #00000050;
-    overflow-y: hidden;
+    overflow: hidden;
+
 }
 
 .post {

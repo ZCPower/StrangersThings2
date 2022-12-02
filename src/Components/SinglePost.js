@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import '../Styles/SinglePost.css'
-import { deletePost, getPostById } from '../API/api';
+import { getPostById } from '../API/api';
 import EditPost from './EditPost';
-import { editPost } from '../API/api';
 import MessageForm from './MessageForm';
 
 

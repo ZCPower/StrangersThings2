@@ -18,12 +18,6 @@ function AllPosts({ token, userId }) {
         getPosts()
     }, [])
 
-    //have a piece of state that tells what we are searching for.
-    //create a variable that filters postList where x.title contains searchVariable
-    //map this new array and have that be what is dispalyed.
-
-    // console.log(postList, 'post list')
-
     const filtered = postList.filter((x => {
         return x.title.toLowerCase().includes(finalSearch.toLowerCase())
     }))
@@ -62,7 +56,7 @@ function AllPosts({ token, userId }) {
             <form id='searchForm'><img src='https://img.icons8.com/glyph-neue/2x/search.png'></img><input onChange={handleSearchChange} placeholder="Type what you're looking for..." id='postSearch'></input><button onClick={handleSearchSubmit}>Search</button></form>
             {token ? <Link to='/createpost'><button id='addPostButton'>Add Post</button></Link> : null}
             <div id='postHouse'>
-                {mappedPosts}</div></div>
+                {mappedPosts.length ? mappedPosts : <h2>There are no posts matching your search!</h2>}</div></div>
     )
 }
 

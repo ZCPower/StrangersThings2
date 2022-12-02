@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import '../Styles/Account.css'
 
-
-
 function Account({ setToken, currUser, setCurrUser }) {
     const [viewing, setViewing] = useState(null);
     console.log(currUser, 'me')

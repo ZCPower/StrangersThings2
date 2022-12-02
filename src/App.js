@@ -40,7 +40,7 @@ function App() {
             <Redirect to='/account/login' />
           </Route>
           <Route exact path='/account/register'>
-            <Register setToken={setToken} setAlertMessage={setAlertMessage} />
+            <Register setAlertMessage={setAlertMessage} alertMessage={alertMessage} />
           </Route>
           <Route exact path='/account/login'>
             {!token ? <Login setToken={setToken} token={token} alertMessage={alertMessage} /> : <Redirect to='/posts' />}

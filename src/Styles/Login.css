@@ -88,3 +88,18 @@
     font-size: 24px;
     color: black;
 }
+
+#errorAlert {
+    position: absolute;
+    top: 5vh;
+    padding: 1.5em;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#errorAlert p {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
