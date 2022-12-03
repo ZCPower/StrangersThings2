@@ -51,7 +51,7 @@ function Account({ setToken, currUser, setCurrUser }) {
         <div id='accountContainer'>
             <div id='accountInfo'>
                 {currUser ? <h2>{currUser.username}</h2> : null}
-                <img src='https://img.icons8.com/windows/344/user.png'></img>
+                <img src='https://img.icons8.com/windows/344/user.png' alt='User Profile'></img>
                 <div id='accountButtons'>
                     <button id='myMessagesButton' onClick={viewMessages}>Messages</button>
                     <button id='myPostButton' onClick={viewPosts}>My Posts</button>

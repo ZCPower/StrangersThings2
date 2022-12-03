@@ -54,11 +54,11 @@ function SinglePost({ token, userId }) {
                 <section id='singlePostButtons'>
                     {currPost.author && currPost.author._id === userId ?
                         <button onClick={toggleEdit}><img
-                            src='https://img.icons8.com/ios-filled/344/pencil--v2.png'></img>Edit Posting</button>
+                            src='https://img.icons8.com/ios-filled/344/pencil--v2.png' alt='Pencil/Edit'></img>Edit Posting</button>
                         : <button onClick={toggleMessage}
                             className={messaging ? 'red' : null} >
 
-                            <img src={!messaging ? 'https://img.icons8.com/windows/344/chat-message.png' : 'https://img.icons8.com/ios-glyphs/512/delete-sign.png'}>
+                            <img src={!messaging ? 'https://img.icons8.com/windows/344/chat-message.png' : 'https://img.icons8.com/ios-glyphs/512/delete-sign.png'} alt=''>
 
 
                             </img>{!messaging ? 'Contact Seller' : 'Cancel Message'}</button>}

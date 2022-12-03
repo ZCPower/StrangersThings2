@@ -12,17 +12,14 @@ function AllPosts({ token, userId }) {
     useEffect(() => {
         async function getPosts() {
             let allPosts = await getAllPosts();
-            console.log(allPosts)
             setPostList(allPosts.data.posts)
         }
         getPosts()
-    }, [])
+    }, [postList])
 
     const filtered = postList.filter((x => {
         return x.title.toLowerCase().includes(finalSearch.toLowerCase())
     }))
-    console.log(searchInput)
-    console.log(filtered, 'filtered')
 
     function handleSearchChange(e) {
         e.preventDefault()
@@ -45,7 +42,7 @@ function AllPosts({ token, userId }) {
                 {x.author._id === userId ? <button onClick={() => {
                     deletePost(token, x._id)
 
-                }}> <img src='https://img.icons8.com/ios-glyphs/512/delete-sign.png'></img>Delete</button > : null}
+                }}> <img src='https://img.icons8.com/ios-glyphs/512/delete-sign.png' alt='X to symbolize deletion'></img>Delete</button > : null}
             </div >
         )
     })
@@ -53,7 +50,7 @@ function AllPosts({ token, userId }) {
 
     return (
         <div id='allPostsContainer'><h2>All Postings</h2>
-            <form id='searchForm'><img src='https://img.icons8.com/glyph-neue/2x/search.png'></img><input onChange={handleSearchChange} placeholder="Type what you're looking for..." id='postSearch'></input><button onClick={handleSearchSubmit}>Search</button></form>
+            <form id='searchForm'><img src='https://img.icons8.com/glyph-neue/2x/search.png' alt='magnifying class for search button'></img><input onChange={handleSearchChange} placeholder="Type what you're looking for..." id='postSearch'></input><button onClick={handleSearchSubmit}>Search</button></form>
             {token ? <Link to='/createpost'><button id='addPostButton'>Add Post</button></Link> : null}
             <div id='postHouse'>
                 {mappedPosts.length ? mappedPosts : <h2>There are no posts matching your search!</h2>}</div></div>
